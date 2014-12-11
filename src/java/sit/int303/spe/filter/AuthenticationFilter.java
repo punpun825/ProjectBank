@@ -39,6 +39,7 @@ public class AuthenticationFilter implements Filter {
         System.out.println("uri before: "+ uri);
         uri = uri.substring(uri.indexOf("/", 1));
         System.out.println("uri after: "+ uri);
+        System.out.println("uri b: "+ uri);
         uri = rp.encodeURL("/Login?destination="+uri);
         if (s.getAttribute("user")==null) {
             config.getServletContext().getRequestDispatcher(uri).forward(request, response);
